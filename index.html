@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Snapchat Chat UI</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #fffc00;
+  padding: 30px;
+}
+
+/* Main Container */
+.app {
+  background: #fff;
+  width: 100%;
+  max-width: 1200px;
+  height: 90vh;
+  margin: auto;
+  border-radius: 12px;
+  display: flex;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 300px;
+  border-right: 1px solid #eee;
+}
+
+.sidebar-header {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sidebar-header img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.search {
+  padding: 10px 15px;
+}
+
+.search input {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+/* Chat List */
+.chat-list {
+  padding: 10px;
+}
+
+.chat-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.chat-item.active {
+  background: #f5f5f5;
+}
+
+.chat-item img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.chat-item small {
+  color: gray;
+}
+
+/* Chat Area */
+.chat-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Chat Header */
+.chat-header {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chat-header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.chat-header img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.chat-icons span {
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+/* Messages */
+.messages {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.label {
+  font-size: 12px;
+  color: gray;
+  margin-top: 15px;
+}
+
+.text {
+  margin: 5px 0 15px;
+}
+
+/* Input */
+.chat-input {
+  padding: 15px;
+  border-top: 1px solid #eee;
+  display: flex;
+  gap: 10px;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 25px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+.send {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #d5d1a3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="app">
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <img src="1000103842.jpg">
+      <b>Anish</b>
+    </div>
+
+    <div class="search">
+      <input type="text" placeholder="Search">
+    </div>
+
+    <div class="chat-list">
+      <div class="chat-item active">
+        <img src="1000084598.jpg">
+        <div>
+          <b>Guhan</b><br>
+          <small>New Chat · 10m</small>
+        </div>
+      </div>
+
+      <div class="chat-item">
+        <img src="1000105833.jpg">
+        <div>
+          <b>Divith</b><br>
+          <small>New Snap 🔥</small>
+        </div>
+      </div>
+
+      <div class="chat-item">
+        <img src="https://i.pravatar.cc/100?img=4">
+        <div>
+          <b>Harishramanujam</b><br>
+          <small>Typing...</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chat Area -->
+  <div class="chat-area">
+
+    <div class="chat-header">
+      <div class="chat-header-left">
+        <img src="1000084598.jpg">
+        <b>Guhan</b>
+      </div>
+      <div class="chat-icons">
+        <span>📞</span>
+        <span>🎥</span>
+        <span>⋮</span>
+      </div>
+    </div>
+
+    <div class="messages">
+      <div class="label">GUHAN</div>
+      <div class="text">HEY MAN ARE YOU COMING FOR THE TRIP?</div>
+
+      <div class="label">DIVITH</div>
+      <div class="text">HEY GUHAN✌️ YES I COMING FOR THE TRIP</div>
+
+      <div class="label">ME (ANISH)</div>
+      <div class="text">IS THE TRIP PLAN IS CONFORIMED😄</div>
+
+      <div class="text">YESS</div>
+      <small style="color:gray;">▶ Delivered</small>
+    </div>
+
+    <div class="chat-input">
+      <input type="text" placeholder="Send a chat">
+      <div class="send">➤</div>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
